@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<link th:href="@{/bootstrap.css}" rel="stylesheet" />
+	</head>
+	<body class="bg-personalizado">
+		<div class="container mt-4 ">
+			<div class="col-sm-6">
+				<form th:action="@{/save}" th:object=${duenio} method="POST">
+					<div class="card">
+						<div class="card-header">
+							<h2>Modulo Dueño</h2>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label>Id (Estimado usario, no modifiques este valor)</label>
+								<input id="inputId"  type="text" class="form-control" th:field="*{idDuenio}"  >
+							</div>
+							<div class="form-group">
+								<label>Nombre</label>
+								<input  type="text" class="form-control" th:field="*{nombreDuenio}">
+							</div>
+							<div class="form-group">
+								<label>Dirección</label>
+								<input  type="text" class="form-control" th:field="*{direccionDuenio}">
+							</div>
+							<div class="form-group">
+								<label>Telefono</label>
+								<input  type="text" class="form-control" th:field="*{telefonoDuenio}">
+							</div>
+						</div>
+						<div class="card-footer">
+							<input type="submit" value="Guardar" class="btn btn-success" >
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+
+	</body >
+</html>
